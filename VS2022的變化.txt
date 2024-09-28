@@ -1,0 +1,10 @@
+*** .NET Core 6~8  /  VS 2022的變化 ***
+
+(1) 只有 Programe.cs設定檔  跟以前 .NET Core不同
+
+(2) 程式上方的 資料庫連結
+   （Repo控制器 與 /Models/Repo/UserTableRepository.cs這兩個檔案有改，要小心！）
+
+其餘程式都一模一樣。甚至跟 MVC5 (.NET 4.x版)一模一樣
+
+不用擔心！

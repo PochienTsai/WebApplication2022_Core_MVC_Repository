@@ -1,0 +1,57 @@
+﻿@model WebApplication2022_Core_MVC_Repository.Models.UserTable
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create -- 新增一筆記錄  (Repo控制器）</h1>
+//*******************************************************************<br />
+// 拜託！拜託！不要只會 Copy程式碼！<br />
+// 拜託！拜託！  Program.cs設定檔  也比對一下！......每次程式改成 .NET Core都會在這裡漏掉<br />
+//*******************************************************************<br /><br />
+<h4>UserTable</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+@*            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserSex" class="control-label"></label>
+                <input asp-for="UserSex" class="form-control" />
+                <span asp-validation-for="UserSex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserBirthDay" class="control-label"></label>
+                <input asp-for="UserBirthDay" class="form-control" />
+                <span asp-validation-for="UserBirthDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserMobilePhone" class="control-label"></label>
+                <input asp-for="UserMobilePhone" class="form-control" />
+                <span asp-validation-for="UserMobilePhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create（新增一筆記錄）" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to List（列表）</a>  |  
+    @Html.ActionLink("Back to List（列表）", "List")
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

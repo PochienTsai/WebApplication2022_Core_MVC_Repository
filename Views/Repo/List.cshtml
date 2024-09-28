@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebApplication2022_Core_MVC_Repository.Models.UserTable>
+
+@{
+    ViewData["Title"] = "List";
+}
+//*******************************************************************<br />
+// 拜託！拜託！不要只會 Copy程式碼！<br />
+// 拜託！拜託！  Program.cs設定檔  也比對一下！......每次程式改成 .NET Core都會在這裡漏掉<br />
+//*******************************************************************<br /><br />
+<h1>List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserSex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserBirthDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserMobilePhone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserSex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserBirthDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserMobilePhone)
+            </td>
+            <td>   <!-- 我已經改過路由，詳見 Program.cs設定檔 -->
+                @Html.ActionLink("Edit（編輯）", "Edit", new { _ID = item.UserId }) |
+                @Html.ActionLink("Details（明細）", "Details", new { _ID = item.UserId }) |
+                @Html.ActionLink("Delete（列表）", "Delete", new { _ID = item.UserId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
