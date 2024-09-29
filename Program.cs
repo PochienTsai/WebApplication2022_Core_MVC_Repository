@@ -52,7 +52,7 @@ builder.Services.AddDbContext<MVC_UserDBContext>(options =>
 // 拜託！拜託！不要只會 Copy程式碼！
 // 拜託！拜託！  Program.cs設定檔  也比對一下！......每次程式改成 .NET Core都會在這裡漏掉
 //*******************************************************************
-builder.Services.AddScoped<IUserTableRepository, UserTableRepository>(); //** 重點！ **
+builder.Services.AddScoped<IUserTableRepository, UserTableRepository>(); //** 重點！ ** (設計的Interface, 實作後的class)
 
 // https://docs.microsoft.com/zh-tw/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-5.0#service-registration-methods
 // [微軟文件] 相依性插入可透過下列方式解決這些問題：
